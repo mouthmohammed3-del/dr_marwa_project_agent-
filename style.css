@@ -99,20 +99,41 @@ select {
     font-weight: normal;
 }
 
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 button {
-    background-color: #3498db;
+    flex: 1;
     color: #fff;
     border: none;
     padding: 12px 20px;
     font-size: 1.1em;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-button:hover {
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #3498db;
+}
+
+.btn-primary:hover {
     background-color: #2980b9;
+}
+
+.btn-greedy {
+    background-color: #9b59b6;
+}
+
+.btn-greedy:hover {
+    background-color: #8e44ad;
 }
 
 .results-container {
@@ -123,9 +144,24 @@ button:hover {
     margin-top: 20px;
 }
 
+.results-container.greedy-mode {
+    background-color: #f5eef8;
+    border-left-color: #9b59b6;
+}
+
 .results-container h3 {
     margin-top: 0;
-    color: #2980b9;
+    color: inherit;
+}
+
+.greedy-explanation {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #d7bde2;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #4a235a;
 }
 
 .result-card {
